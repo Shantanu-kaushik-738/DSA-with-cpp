@@ -1,0 +1,37 @@
+& = all true -> true;
+
+| = single true -> true;
+
+^ = even no. of 1 -> 0 or odd no. of 1 -> 1
+
+swift(>>) { 13 >> 1 = 6 ((1 1 0 1 >> 1) = (0 1 1 0)) right sift by 1 
+            that mean (n >> k) = (n / 2 ^ k); 
+}
+
+swift(<<) { 13 << 1 = 6 ((1 1 0 1 << 1) = (1 1 0 1 0)) left sift by 1 
+            that mean (n << k) = (n * 2 ^ k); 
+}
+
+~(not) = ~(5) {
+        ~(0 1 0 1) = 1. (1 0 1 0)
+                     2. check (-ve) ? 2's compliment : stop;
+                     3. (1(-ve) 0 1 0) -> i. flip (1 0 1 0) = (0 1 0 1)
+                                          ii. add 1 (0 1 0 1 + 0 0 0 1) = (0 1 1 0)
+                     4. ~(5) = (-6) 
+}
+
+~(not) = ~(-6) {
+        ~(1 0 1 0) = 1. (0 1 0 1) flip
+                     2. check (-ve) ? 2's compliment : stop;
+                     // stop 
+                     3. ~(-6) = 5
+
+    if (number is negetive) {
+        convert number into 2's compliment
+    }
+}
+
+0 for positive 
+1 for negetive
+
+negetive number of any number = 2's compliment of own number
