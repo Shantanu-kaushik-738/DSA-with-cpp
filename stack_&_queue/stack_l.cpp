@@ -2,33 +2,33 @@
 using namespace std;
 
 class Stack
-{ // using linked list
+{ // using list
 public:
-    list<int> ll;
+    list<int> l;
 
     void push(int i)
     {
-        ll.push_front(i);
+        l.push_front(i);
     }
 
     void pop()
     {
-        ll.pop_front();
+        l.pop_front();
     }
 
     int top()
     {
-        return ll.front();
+        return l.front();
     }
 
     bool empty()
     {
-        return ll.empty();
+        return l.empty();
     }
 
     void print()
     {
-        for (auto &i : ll)
+        for (auto &i : l)
         {
             cout << i << " ";
         }
