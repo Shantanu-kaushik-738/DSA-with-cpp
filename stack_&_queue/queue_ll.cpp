@@ -27,16 +27,16 @@ public:
 
     int push(int i)
     { // insert at tail
-        Node *newNode = new Node(i);
+        Node *temp = new Node(i);
 
         if (empty())
         {
-            head = tail = newNode;
+            head = tail = temp;
         }
         else
         {
-            tail->next = newNode;
-            tail = newNode;
+            tail->next = temp;
+            tail = temp;
         }
     }
 
